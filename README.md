@@ -4,7 +4,7 @@ This [Docker](https://www.docker.com) image can be used to test [Ansible](https:
 
 ## Supported tags
 
-* 6
+* latest
 * 7
 
 ## Usage
@@ -12,7 +12,7 @@ This [Docker](https://www.docker.com) image can be used to test [Ansible](https:
 Run the container as a daemon
 
 ```console
-docker run --cap-add SYS_ADMIN --detach --name centos-7 --rm --volume /sys/fs/cgroup:/sys/fs/cgroup:ro dhoppe/molecule-centos:7
+docker run --cap-add SYS_ADMIN --detach --name centos-7 --rm --volume /sys/fs/cgroup:/sys/fs/cgroup:ro dhoppe/molecule-centos-7
 ```
 
 Enter the container
