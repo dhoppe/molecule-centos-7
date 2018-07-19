@@ -5,6 +5,7 @@ LABEL maintainer="Dennis Hoppe"
 ENV container docker
 
 RUN yum upgrade -y \
+    && yum -y install iproute \
     && yum clean all
 
 RUN cd /lib/systemd/system/sysinit.target.wants/; \
