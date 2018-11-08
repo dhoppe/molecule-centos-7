@@ -5,7 +5,7 @@ LABEL maintainer="Dennis Hoppe"
 ENV container docker
 
 RUN yum upgrade -y \
-    && yum -y install iproute \
+    && yum -y install iproute nc \
     && yum clean all
 
 RUN cd /lib/systemd/system/sysinit.target.wants/; \
@@ -21,4 +21,4 @@ RUN rm -f /lib/systemd/system/multi-user.target.wants/* \
 
 VOLUME [ "/sys/fs/cgroup" ]
 
-CMD ["/usr/sbin/init"] 
+CMD ["/usr/sbin/init"]
